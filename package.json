@@ -12,7 +12,7 @@
   "name": "projet-7-les-petits-plats",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/ToxyhDev/OC-Dev_App_JS_React-P7-LesPetitsPlats.git~",
+  "repository": "https://github.com/ToxyhDev/OC-Dev_App_JS_React-P7-LesPetitsPlats.git",
   "author": "Tom Andre",
   "license": "MIT"
 }
