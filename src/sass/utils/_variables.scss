@@ -1,43 +1,3 @@
-//Variables
-
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-tertiary-font: #008766;
-
-$color-surface-dim: #353535;
-$color-surface-dim2: #eaeaea;
-$color-surface: white;
-$color-surface-container: #f6f6f6;
-
-$color-icon: #7e7e7e;
-
-$color-font: black;
-
-$color-button-gradient: linear-gradient(
-  175deg,
-  $color-secondary 0%,
-  $color-primary 100%
-);
-
-$font-title: 'Shrikhand', sans-serif;
-$font-body: 'Roboto', sans-serif;
-
-$fontSize-main-title: 1.875rem; //30px
-
-$fontSize-section-title: 1.5rem; //24px
-$fontSize-section-title2: 1.125rem; //18px
-$fontSize-section-title3: 1rem; //16px
-$fontSize-paragraph: 1.125rem;
-$fontSize-button: 1rem;
-
-$fontSize-restaurant-name: 1.75rem;
-$fontSize-restaurant-label: 0.875rem; //14px
-
-$fontSize-menuPlate-title: 1.125rem;
-$fontSize-menuPlate-details: 0.94019rem; //15px
-$fontSize-menuPlate-price: 0.94019rem;
-
 /* Tableau de coresspondance "rem" -> "px"
     Pour 100% :
     0.25rem; //4px
@@ -57,16 +17,10 @@ $fontSize-menuPlate-price: 0.94019rem;
     5rem; //80px
     */
 
-$shadow-card: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-$shadow-instruction: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-$shadow-button: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-$shadow-plate: 0px 4.011494159698486px 15.043103218078613px 0px
-  rgba(0, 0, 0, 0.1);
-$shadow-badge: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-
-$global-size: 75%;
 $breakpoints: (
-  tablet: 767.98px,
-  // desktop: 1439.98px,
-  desktop: 1223.98px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 );

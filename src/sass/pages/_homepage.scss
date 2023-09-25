@@ -1,0 +1,141 @@
+/*
+
+    => Section des filtres
+
+*/
+.section-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  //   justify-content: space-between;
+  gap: 1rem;
+  @include md {
+    gap: 1rem 4rem;
+  }
+}
+
+.filter {
+  min-width: 9rem;
+  max-width: 100%;
+  flex: 1 0 100%;
+  @include lg {
+    min-width: 9rem;
+    max-width: 25%;
+    flex: 1 0 25%;
+  }
+}
+
+.filter-result {
+  width: 30%;
+  font-size: 1.3125rem;
+  text-align: end;
+}
+
+.section-filterSelected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.filterSelected {
+  background-color: var(--bs-primary);
+  padding: 1.0625rem 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 3.75rem;
+  border-radius: 0.625rem;
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+  &__close {
+    width: 0.625rem;
+    height: 0.625rem;
+    background-image: url(../assets/header/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+/*
+
+    => Section des recettes avec les cards
+
+*/
+
+.section-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.recipe {
+  min-width: 23.75rem;
+  max-width: 30%;
+  flex: 1 0 30%;
+  border-radius: 1.3125rem;
+  background-color: white;
+  overflow: hidden;
+  &__header {
+    height: 15.8125rem;
+    position: relative;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__time {
+    background-color: var(--bs-primary);
+    position: absolute;
+    top: 1.31rem;
+    right: 1.38rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 0.31rem 0.94rem;
+    border-radius: 0.88rem;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+  }
+
+  &__text {
+    padding: 2rem 1.56rem 3.81rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &--title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--bs-tertiary);
+    }
+    &--desc {
+      font-size: 0.875rem;
+      font-weight: 400;
+
+      & span {
+        color: var(--bs-tertiary);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.31rem 0rem;
+    &--size {
+      max-width: 50%;
+      flex: 1 0 50%;
+    }
+  }
+}

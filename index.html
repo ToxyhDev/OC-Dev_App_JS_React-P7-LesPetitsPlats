@@ -5,7 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link rel="stylesheet" href="./src/css/sass.css" />
+
     <title>Les Petits Plats</title>
   </head>
-  <body></body>
+  <body>
+    <div class="body-container d-flex flex-column w-100 h-100">
+      <header class="header">
+        <div class="header__title">
+          <img
+            src="./src/assets/logo/logo-main.svg"
+            alt="Logo des Petits Plats"
+            class="header__logo"
+          />
+        </div>
+
+        <section class="header__searchBar">
+          <h2 class="text-primary searchBar__text">
+            Cherchez parmi plus de 1500 recettes du quotidien, simples et
+            délicieuses
+          </h2>
+          <form action="#" class="searchBar__form">
+            <label for="search" class="form-label searchBar__label"></label>
+            <input
+              type="search"
+              name="search"
+              id="search"
+              class="searchBar__input"
+              placeholder="Rechercher une recette, un ingrédient, ..."
+            />
+            <button class="searchBar__button" type="submit"></button>
+          </form>
+        </section>
+      </header>
+      <!-- Main -->
+      <main class="container mb-5">
+        <!-- Filter -->
+        <div class="section-filter py-4">
+          <div class="filters">
+            <div class="filter">
+              <button
+                class="filter-button"
+                role="combobox"
+                aria-labelledby="filter-dropdown0"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="filter-dropdown0"
+              >
+                <span class="filter-category">Ingrédients</span>
+                <span class="filter-arrow"></span>
+              </button>
+              <ul class="filter-dropdown" role="listbox" id="filter-dropdown0">
+                <li role="option">
+                  <input type="radio" id="filter-date0" name="chooce-filter" />
+                  <label for="filter-date0" class="filter-option" tabindex="0"
+                    >Date</label
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="filter">
+              <button
+                class="filter-button"
+                role="combobox"
+                aria-labelledby="filter-dropdown1"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="filter-dropdown1"
+              >
+                <span class="filter-category">Appareils</span>
+                <span class="filter-arrow"></span>
+              </button>
+              <ul class="filter-dropdown" role="listbox" id="filter-dropdown1">
+                <li role="option">
+                  <input type="radio" id="filter-date1" name="chooce-filter" />
+                  <label for="filter-date1" class="filter-option" tabindex="0"
+                    >Date</label
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="filter">
+              <button
+                class="filter-button"
+                role="combobox"
+                aria-labelledby="filter-dropdown2"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="filter-dropdown2"
+              >
+                <span class="filter-category">Ustensiles</span>
+                <span class="filter-arrow"></span>
+              </button>
+              <ul class="filter-dropdown" role="listbox" id="filter-dropdown2">
+                <li role="option">
+                  <input type="radio" id="filter-date2" name="chooce-filter" />
+                  <label for="filter-date2" class="filter-option" tabindex="0"
+                    >Date</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <span class="font-strong filter-result">6 recettes</span>
+        </div>
+        <div class="section-filterSelected">
+          <div class="filterSelected">
+            <p class="filterSelected__name">Crème de coco</p>
+            <span class="filterSelected__close"></span>
+          </div>
+          <div class="filterSelected">
+            <p class="filterSelected__name">Farine</p>
+            <span class="filterSelected__close"></span>
+          </div>
+          <div class="filterSelected">
+            <p class="filterSelected__name">oeuf</p>
+            <span class="filterSelected__close"></span>
+          </div>
+          <div class="filterSelected">
+            <p class="filterSelected__name">Cookeo</p>
+            <span class="filterSelected__close"></span>
+          </div>
+          <div class="filterSelected">
+            <p class="filterSelected__name">Machine à café</p>
+            <span class="filterSelected__close"></span>
+          </div>
+        </div>
+        <!-- Recipes section -->
+        <div class="section-recipes pt-5">
+          <div class="recipe">
+            <header class="recipe__header">
+              <img
+                src="./src/assets/recettes/Recette01.jpg"
+                class="recipe__img"
+                alt=""
+              />
+              <span class="recipe__time">10min</span>
+            </header>
+            <article class="recipe__text">
+              <h3 class="recipe__title">Limonade de Coco</h3>
+
+              <section class="recipe__desc">
+                <h4 class="recipe__text--title">RECETTE</h4>
+                <p class="recipe__text--desc">
+                  Mettre les glaçons à votre goût dans le blender, ajouter le
+                  lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer
+                  jusqu'à avoir la consistence désirée.
+                </p>
+              </section>
+              <section class="recipe__ingredients">
+                <h4 class="recipe__text--title">INGRÉDIENTS</h4>
+                <ul class="recipe__list">
+                  <li class="recipe__text--desc recipe__list--size">
+                    Lait de coco <br /><span>400ml</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Jus de citron <br /><span>2</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Créme de coco <br /><span>4 cuillères</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Sucre <br /><span>20g</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Glaçons <br /><span>2</span>
+                  </li>
+                </ul>
+              </section>
+            </article>
+          </div>
+
+          <div class="recipe">
+            <header class="recipe__header">
+              <img
+                src="./src/assets/recettes/Recette02.jpg"
+                class="recipe__img"
+                alt=""
+              />
+              <span class="recipe__time">10min</span>
+            </header>
+            <article class="recipe__text">
+              <h3 class="recipe__title">Limonade de Coco</h3>
+
+              <section class="recipe__desc">
+                <h4 class="recipe__text--title">RECETTE</h4>
+                <p class="recipe__text--desc">
+                  Mettre les glaçons à votre goût dans le blender, ajouter le
+                  lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer
+                  jusqu'à avoir la consistence désirée.
+                </p>
+              </section>
+              <section class="recipe__ingredients">
+                <h4 class="recipe__text--title">INGRÉDIENTS</h4>
+                <ul class="recipe__list">
+                  <li class="recipe__text--desc recipe__list--size">
+                    Lait de coco <br /><span>400ml</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Jus de citron <br /><span>2</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Créme de coco <br /><span>4 cuillères</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Sucre <br /><span>20g</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Glaçons <br /><span>2</span>
+                  </li>
+                </ul>
+              </section>
+            </article>
+          </div>
+
+          <div class="recipe">
+            <header class="recipe__header">
+              <img
+                src="./src/assets/recettes/Recette03.jpg"
+                class="recipe__img"
+                alt=""
+              />
+              <span class="recipe__time">10min</span>
+            </header>
+            <article class="recipe__text">
+              <h3 class="recipe__title">Limonade de Coco</h3>
+
+              <section class="recipe__desc">
+                <h4 class="recipe__text--title">RECETTE</h4>
+                <p class="recipe__text--desc">
+                  Mettre les glaçons à votre goût dans le blender, ajouter le
+                  lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer
+                  jusqu'à avoir la consistence désirée.
+                </p>
+              </section>
+              <section class="recipe__ingredients">
+                <h4 class="recipe__text--title">INGRÉDIENTS</h4>
+                <ul class="recipe__list">
+                  <li class="recipe__text--desc recipe__list--size">
+                    Lait de coco <br /><span>400ml</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Jus de citron <br /><span>2</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Créme de coco <br /><span>4 cuillères</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Sucre <br /><span>20g</span>
+                  </li>
+                  <li class="recipe__text--desc recipe__list--size">
+                    Glaçons <br /><span>2</span>
+                  </li>
+                </ul>
+              </section>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

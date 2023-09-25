@@ -1,56 +1,24 @@
-* {
-  scroll-behavior: smooth;
-  font-size: $global-size;
-  box-sizing: border-box;
-
-  @include tablet-only {
+html {
+  font-size: 75%;
+  @include sm {
     font-size: 100%;
   }
-}
-
-*:active,
-*:focus {
-  -webkit-tap-highlight-color: transparent;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: $font-body;
-  color: $color-font;
-  display: flex;
-  justify-content: center;
 }
 
 h1,
 h2,
 h3,
-h4,
+.font-strong {
+  font-family: 'Anton', sans-serif !important;
+  margin: 0 !important;
+}
 p {
-  margin: 0;
-  font-weight: normal;
+  margin: 0 !important;
 }
-
-ul,
-ol {
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+li {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: $color-font;
-}
-
-button {
-  border: none;
-  outline: none;
-  padding: 0;
-  background-color: transparent;
-}
-
-.body-container {
-  width: 100%;
-  box-sizing: border-box;
 }
