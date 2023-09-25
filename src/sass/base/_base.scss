@@ -1,0 +1,56 @@
+* {
+  scroll-behavior: smooth;
+  font-size: $global-size;
+  box-sizing: border-box;
+
+  @include tablet-only {
+    font-size: 100%;
+  }
+}
+
+*:active,
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-body;
+  color: $color-font;
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $color-font;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.body-container {
+  width: 100%;
+  box-sizing: border-box;
+}

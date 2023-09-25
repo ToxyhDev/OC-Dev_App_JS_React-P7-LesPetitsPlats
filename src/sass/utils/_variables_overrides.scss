@@ -1,0 +1,29 @@
+// Custom.scss
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../../node_modules/bootstrap/scss/functions';
+
+// $primary: #0e5fd8;
+// $secondary: #ffb867;
+$font-family-base: 'Manrope';
+
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/variables-dark';
+
+// 4. Include any default map overrides here
+// Create your own map
+$custom-colors: (
+  'primary': #ffd15b,
+  'primary-on': #f8f9ff,
+  // 'primary-container': #b0c6ff,
+  'secondary': #1b1b1b,
+  'secondary-on': #ffffff,
+  // 'secondary-container': #ffddbb,
+  'tertiary': #7a7a7a,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$primary-on: map-get($theme-colors, 'primary-on');
+$body-bg: $primary-on;
