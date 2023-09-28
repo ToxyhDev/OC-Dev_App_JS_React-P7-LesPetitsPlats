@@ -43,68 +43,139 @@
         <!-- Filter -->
         <div class="section-filter py-4">
           <div class="filters">
+            <!-- Filtre Ingrédients -->
             <div class="filter">
               <button
-                class="filter-button"
+                class="filter__button"
                 role="combobox"
                 aria-labelledby="filter-dropdown0"
                 aria-haspopup="listbox"
                 aria-expanded="false"
                 aria-controls="filter-dropdown0"
               >
-                <span class="filter-category">Ingrédients</span>
-                <span class="filter-arrow"></span>
+                <span>Ingrédients</span>
+                <span class="filter__button--arrow"></span>
               </button>
-              <ul class="filter-dropdown" role="listbox" id="filter-dropdown0">
-                <li role="option">
-                  <input type="radio" id="filter-date0" name="chooce-filter" />
-                  <label for="filter-date0" class="filter-option" tabindex="0"
-                    >Date</label
-                  >
-                </li>
-              </ul>
+              <div
+                class="filter__dropdown"
+                id="filter-dropdown0"
+                role="listbox"
+              >
+                <form action="#" class="filter__search">
+                  <label for="search-ingredients"></label>
+                  <input
+                    class="filterForm__input"
+                    type="search"
+                    name="search-ingredients"
+                    id="search-ingredients"
+                  />
+                  <button type="submit" class="filterForm__btn"></button>
+                </form>
+                <ul class="filterDropdown__list">
+                  <li role="option">
+                    <input
+                      type="radio"
+                      id="filter-chocolat"
+                      name="chooce-filter"
+                    />
+                    <label
+                      for="filter-chocolat"
+                      class="filterDropdown__option"
+                      tabindex="0"
+                      >Chocolat</label
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- Filtre Appareils -->
             <div class="filter">
               <button
-                class="filter-button"
+                class="filter__button"
                 role="combobox"
                 aria-labelledby="filter-dropdown1"
                 aria-haspopup="listbox"
                 aria-expanded="false"
                 aria-controls="filter-dropdown1"
               >
-                <span class="filter-category">Appareils</span>
-                <span class="filter-arrow"></span>
+                <span>Appareils</span>
+                <span class="filter__button--arrow"></span>
               </button>
-              <ul class="filter-dropdown" role="listbox" id="filter-dropdown1">
-                <li role="option">
-                  <input type="radio" id="filter-date1" name="chooce-filter" />
-                  <label for="filter-date1" class="filter-option" tabindex="0"
-                    >Date</label
-                  >
-                </li>
-              </ul>
+              <div
+                class="filter__dropdown"
+                id="filter-dropdown1"
+                role="listbox"
+              >
+                <form action="#" class="filter__search">
+                  <label for="search-appareils"></label>
+                  <input
+                    class="filterForm__input"
+                    type="search"
+                    name="search-appareils"
+                    id="search-appareils"
+                  />
+                  <button type="submit" class="filterForm__btn"></button>
+                </form>
+                <ul class="filterDropdown__list">
+                  <li role="option">
+                    <input
+                      type="radio"
+                      id="filter-cookeo"
+                      name="chooce-filter"
+                    />
+                    <label
+                      for="filter-cookeo"
+                      class="filterDropdown__option"
+                      tabindex="0"
+                      >Cookeo</label
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="filter">
               <button
-                class="filter-button"
+                class="filter__button"
                 role="combobox"
                 aria-labelledby="filter-dropdown2"
                 aria-haspopup="listbox"
                 aria-expanded="false"
                 aria-controls="filter-dropdown2"
               >
-                <span class="filter-category">Ustensiles</span>
-                <span class="filter-arrow"></span>
+                <span>Ustensiles</span>
+                <span class="filter__button--arrow"></span>
               </button>
-              <ul class="filter-dropdown" role="listbox" id="filter-dropdown2">
-                <li role="option">
-                  <input type="radio" id="filter-date2" name="chooce-filter" />
-                  <label for="filter-date2" class="filter-option" tabindex="0"
-                    >Date</label
-                  >
-                </li>
-              </ul>
+              <div
+                class="filter__dropdown"
+                id="filter-dropdown2"
+                role="listbox"
+              >
+                <form action="#" class="filter__search">
+                  <label for="search-ustensiles"></label>
+                  <input
+                    class="filterForm__input"
+                    type="search"
+                    name="search-ustensiles"
+                    id="search-ustensiles"
+                  />
+                  <button type="submit" class="filterForm__btn"></button>
+                </form>
+                <ul class="filterDropdown__list">
+                  <li role="option">
+                    <input
+                      type="radio"
+                      id="filter-verre"
+                      name="chooce-filter"
+                    />
+                    <label
+                      for="filter-verre"
+                      class="filterDropdown__option"
+                      tabindex="0"
+                      >Verre</label
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <span class="font-strong filter-result">6 recettes</span>
@@ -135,13 +206,14 @@
         <ul class="section-recipes pt-5"></ul>
       </main>
     </div>
-    <script src="./src/js/api/api.js"></script>
+    <script src="./src/js/utils/filters.js"></script>
+    <!-- <script src="./src/js/api/api.js"></script>
     <script src="./src/js/factories/RecipesFactory.js"></script>
 
     <script src="./src/js/models/RecipesModelsCard.js"></script>
 
     <script src="./src/js/templates/RecipeCard.js"></script>
 
-    <script src="./src/js/App.js"></script>
+    <script src="./src/js/App.js"></script> -->
   </body>
 </html>
