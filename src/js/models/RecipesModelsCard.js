@@ -6,7 +6,7 @@
 
 class RecipesModelsCard {
   constructor(data) {
-    console.log(data)
+    // console.log(data)
 
     this._name = data.name
     this._image = data.image

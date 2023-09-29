@@ -13,11 +13,29 @@ class App {
   async main() {
     //  --> Récupération des datas
     const recipesData = await this.recipesApi.get()
-    console.log(recipesData)
+    // console.log(recipesData)
 
     //  --> Trie des données des Recipes Cards
     const recipes = new RecipesFactory(recipesData, 'recipes')
-    console.log(recipes)
+    // console.log(recipes)
+
+    //  --> Trie des données des Nom de recettes (stop word + minuscule)
+    const recipesNames = new RecipesFactory(recipesData, 'name')
+    // console.log(recipesNames)
+
+    //  --> Trie des données des Descriptions de recettes (stop word + minuscule)
+    const recipesDesc = new RecipesFactory(recipesData, 'desc')
+    // console.log(recipesDesc)
+
+    //  --> Trie des données des Ingrédients de recettes (stop word + minuscule)
+    const recipesIngredients = new RecipesFactory(recipesData, 'ingredients')
+    // console.log(recipesIngredients)
+
+    const allSortData = [...recipesNames, ...recipesDesc, ...recipesIngredients]
+    console.log(allSortData)
+
+    const groupAllData = new GroupAllData(allSortData).groupDatas()
+    console.log(groupAllData)
 
     //  --> Création des card recipe et ajout au DOM
     recipes.forEach((recipe) => {
