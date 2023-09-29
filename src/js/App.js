@@ -34,8 +34,13 @@ class App {
     const allSortData = [...recipesNames, ...recipesDesc, ...recipesIngredients]
     console.log(allSortData)
 
+    //  --> Création du tableau de recherche
     const groupAllData = new GroupAllData(allSortData).groupDatas()
     console.log(groupAllData)
+
+    // --> Création du formulaire de recherche
+    const mainSearch = new MainSearch()
+    mainSearch.listenerValidate()
 
     //  --> Création des card recipe et ajout au DOM
     recipes.forEach((recipe) => {

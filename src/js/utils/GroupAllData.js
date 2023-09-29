@@ -10,6 +10,7 @@ class GroupAllData {
 
     this._lengthTotal = 0
     this._invertedIndex = {} // Index inversé
+    this._lengthWordTotal = 0
   }
 
   groupDatas() {
@@ -56,6 +57,9 @@ class GroupAllData {
       }
     }
 
+    const keys = Object.keys(this._invertedIndex)
+    keys.forEach((element) => (this._lengthWordTotal += element.length))
+
     const invertedIndexLength = Object.keys(this._invertedIndex).length
 
     return {
@@ -63,6 +67,7 @@ class GroupAllData {
       lengthTotal: this._lengthTotal,
       invertedIndex: this._invertedIndex,
       invertedIndexLenght: invertedIndexLength,
+      invertedIdLenght: this._lengthWordTotal,
     }
   }
 }

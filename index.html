@@ -26,6 +26,7 @@
             délicieuses
           </h2>
           <form action="#" class="searchBar__form">
+            <!-- onsubmit="return mainSearch.validate(event);" -->
             <label for="search" class="form-label searchBar__label"></label>
             <input
               type="search"
@@ -33,6 +34,7 @@
               id="search"
               class="searchBar__input"
               placeholder="Rechercher une recette, un ingrédient, ..."
+              minlength="3"
             />
             <button class="searchBar__button" type="submit"></button>
           </form>
@@ -209,6 +211,8 @@
     <script src="./src/js/utils/filters.js"></script>
     <script src="./src/js/utils/RemoveStopWords.js"></script>
     <script src="./src/js/utils/GroupAllData.js"></script>
+    <script src="./src/js/utils/MainSearch.js"></script>
+    <script src="./src/js/utils/ListTags.js"></script>
     <script src="./src/js/api/api.js"></script>
     <script src="./src/js/factories/RecipesFactory.js"></script>
 
@@ -218,6 +222,7 @@
     <script src="./src/js/models/RecipesModelsIngredients.js"></script>
 
     <script src="./src/js/templates/RecipeCard.js"></script>
+    <script src="./src/js/templates/TagLabel.js"></script>
 
     <script src="./src/js/App.js"></script>
   </body>
