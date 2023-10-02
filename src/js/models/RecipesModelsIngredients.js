@@ -19,7 +19,7 @@ class RecipesModelsIngredients {
     const listIngredients = this._ingredients.map((element) => {
       const removeStopWord = new RemoveStopWords(element.ingredient)
       const nameFiltered = removeStopWord.filterStopWord()
-      return nameFiltered.toLowerCase()
+      return nameFiltered
     })
     return listIngredients
   }

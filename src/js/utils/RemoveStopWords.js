@@ -20,7 +20,7 @@ class RemoveStopWords {
 
     const removePonct = wordFilter.replace(/\p{P}/gu, '')
 
-    return removePonct
+    return removePonct.toLowerCase()
   }
 
   stopWords() {

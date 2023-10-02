@@ -20,10 +20,11 @@ class MainSearch {
 
   validate(event) {
     event.preventDefault()
-    console.log(this.$inputForm.value.length)
+    // console.log(this.$inputForm.value.length)
     if (this.$inputForm.value.length >= 3) {
-      console.log('Saisi validé')
+      // console.log('Saisi validé')
       this.addTag(this.$inputForm.value)
+      this.$inputForm.value = ''
     } else {
       console.error('Saisir minimum 3 caractères')
     }

@@ -17,6 +17,6 @@ class RecipesModelsDesc {
   get desc() {
     const removeStopWord = new RemoveStopWords(this._desc)
     const nameFiltered = removeStopWord.filterStopWord()
-    return nameFiltered.toLowerCase()
+    return nameFiltered
   }
 }

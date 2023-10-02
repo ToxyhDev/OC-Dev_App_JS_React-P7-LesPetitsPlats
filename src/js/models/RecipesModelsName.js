@@ -18,6 +18,6 @@ class RecipesModelsName {
   get name() {
     const removeStopWord = new RemoveStopWords(this._name)
     const nameFiltered = removeStopWord.filterStopWord()
-    return nameFiltered.toLowerCase()
+    return nameFiltered
   }
 }
