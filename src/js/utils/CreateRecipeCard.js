@@ -35,6 +35,7 @@ class CreateRecipeCard {
   }
 
   createRecipe(recipes) {
+    new NumberRecipes().createResult(recipes.length)
     //  --> Création des card recipe et ajout au DOM
     recipes.forEach((recipe) => {
       const templateCard = new RecipeCard(recipe)
@@ -89,6 +90,7 @@ class CreateRecipeCard {
       this.searchRecipes(resultMatchRecipes)
     } else {
       this.createMsgNotFound()
+      new NumberRecipes().createResult(0)
     }
 
     // console.log(resultMatchRecipes.join().length)
