@@ -73,21 +73,7 @@
                   />
                   <button type="submit" class="filterForm__btn"></button>
                 </form>
-                <ul class="filterDropdown__list">
-                  <li role="option">
-                    <input
-                      type="radio"
-                      id="filter-chocolat"
-                      name="chooce-filter"
-                    />
-                    <label
-                      for="filter-chocolat"
-                      class="filterDropdown__option"
-                      tabindex="0"
-                      >Chocolat</label
-                    >
-                  </li>
-                </ul>
+                <ul class="filterDropdown__list"></ul>
               </div>
             </div>
             <!-- Filtre Appareils -->
@@ -118,21 +104,7 @@
                   />
                   <button type="submit" class="filterForm__btn"></button>
                 </form>
-                <ul class="filterDropdown__list">
-                  <li role="option">
-                    <input
-                      type="radio"
-                      id="filter-cookeo"
-                      name="chooce-filter"
-                    />
-                    <label
-                      for="filter-cookeo"
-                      class="filterDropdown__option"
-                      tabindex="0"
-                      >Cookeo</label
-                    >
-                  </li>
-                </ul>
+                <ul class="filterDropdown__list"></ul>
               </div>
             </div>
             <div class="filter">
@@ -162,21 +134,7 @@
                   />
                   <button type="submit" class="filterForm__btn"></button>
                 </form>
-                <ul class="filterDropdown__list">
-                  <li role="option">
-                    <input
-                      type="radio"
-                      id="filter-verre"
-                      name="chooce-filter"
-                    />
-                    <label
-                      for="filter-verre"
-                      class="filterDropdown__option"
-                      tabindex="0"
-                      >Verre</label
-                    >
-                  </li>
-                </ul>
+                <ul class="filterDropdown__list"></ul>
               </div>
             </div>
           </div>
@@ -194,6 +152,7 @@
     <script src="./src/js/utils/MainSearch.js"></script>
     <script src="./src/js/utils/ListTags.js"></script>
     <script src="./src/js/utils/CreateRecipeCard.js"></script>
+    <script src="./src/js/utils/TagInFilters.js"></script>
 
     <script src="./src/js/factories/RecipeTagFactory.js"></script>
     <script src="./src/js/factories/RecipesFactory.js"></script>
@@ -202,10 +161,13 @@
     <script src="./src/js/models/RecipesModelsName.js"></script>
     <script src="./src/js/models/RecipesModelsDesc.js"></script>
     <script src="./src/js/models/RecipesModelsIngredients.js"></script>
+    <script src="./src/js/models/RecipesModelsAppliance.js"></script>
+    <script src="./src/js/models/RecipesModelsUstensils.js"></script>
 
     <script src="./src/js/templates/RecipeCard.js"></script>
     <script src="./src/js/templates/TagLabel.js"></script>
     <script src="./src/js/templates/NumberRecipes.js"></script>
+    <script src="./src/js/templates/TagFilterElement.js"></script>
 
     <script src="./src/js/App.js"></script>
   </body>

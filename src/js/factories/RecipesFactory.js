@@ -29,6 +29,18 @@ class RecipesFactory {
         return new RecipesModelsIngredients(data)
       })
       return recipesIngredientsData
+    } else if (type === 'appareils') {
+      //*
+      const recipesAppliancesData = data.recipes.map((data) => {
+        return new RecipesModelsAppliance(data)
+      })
+      return recipesAppliancesData
+    } else if (type === 'ustensiles') {
+      //*
+      const recipesUstensilsData = data.recipes.map((data) => {
+        return new RecipesModelsUstensils(data)
+      })
+      return recipesUstensilsData
     } else {
       throw 'Unknown type format'
     }

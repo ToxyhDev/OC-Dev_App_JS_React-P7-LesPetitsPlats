@@ -10,6 +10,8 @@ class App {
     this.$recipesContainer = document.querySelector('.section-recipes')
 
     this._initDataRecipes = new CreateRecipeCard()
+
+    this._initDataFilters = new TagInFilters()
   }
 
   async main() {
@@ -34,10 +36,20 @@ class App {
 
     //  --> Trie des données des Ingrédients de recettes (stop word + minuscule)
     const recipesIngredients = new RecipesFactory(recipesData, 'ingredients')
-    // console.log(recipesIngredients)
+    console.log(recipesIngredients)
 
     const allSortData = [...recipesNames, ...recipesDesc, ...recipesIngredients]
     // console.log(allSortData)
+
+    const recipesAppliance = new RecipesFactory(recipesData, 'appareils')
+
+    const recipesUstensils = new RecipesFactory(recipesData, 'ustensiles')
+
+    this._initDataFilters.initAppliance(
+      recipesIngredients,
+      recipesAppliance,
+      recipesUstensils
+    )
 
     //  --> Création du tableau de recherche
     const groupAllData = new GroupAllData(allSortData).groupDatas()

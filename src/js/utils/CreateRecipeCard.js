@@ -29,6 +29,9 @@ class CreateRecipeCard {
     // --> Vrai affiche toute les recette
     if (boolean) {
       this.createRecipe(recipesArray)
+
+      const idArray = recipesArray.map((recipe) => recipe.id.toString())
+      new TagInFilters(idArray).runSortFilter()
     } else {
       this.searchWordIndex(wordsArray, tags)
     }
@@ -87,9 +90,11 @@ class CreateRecipeCard {
 
     if (resultMatchRecipes.join().length > 0) {
       this.searchRecipes(resultMatchRecipes)
+      new TagInFilters(resultMatchRecipes).runSortFilter()
     } else {
       this.createMsgNotFound()
       new NumberRecipes().createResult(0)
+      new TagInFilters([]).runSortFilter()
     }
 
     // console.log(resultMatchRecipes.join().length)

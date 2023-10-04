@@ -9,6 +9,7 @@ class RecipesModelsIngredients {
   constructor(data) {
     this._id = data.id
     this._ingredients = data.ingredients
+    this._ingredientsFilter = this.ingredientsFilter
   }
 
   get id() {
@@ -20,6 +21,14 @@ class RecipesModelsIngredients {
       const removeStopWord = new RemoveStopWords(element.ingredient)
       const nameFiltered = removeStopWord.filterStopWord()
       return nameFiltered
+    })
+    return listIngredients
+  }
+
+  get ingredientsFilter() {
+    const listIngredients = this._ingredients.map((element) => {
+      // console.log(element)
+      return element.ingredient
     })
     return listIngredients
   }
