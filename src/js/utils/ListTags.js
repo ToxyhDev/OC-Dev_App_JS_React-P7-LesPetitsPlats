@@ -14,10 +14,13 @@ class ListTags {
   // --> J'ajoute mes tags saisi à ma liste(tableau)
   addToListTag(value) {
     ListTags.tagArray.push(value)
-    console.log(ListTags.tagArray)
+    // console.log(ListTags.tagArray)
 
     this.createCard(value)
     this.tagFormatted(value)
+
+    // => Envoie des tags pour l'affichage des recettes correspondantes
+    this.sendTags()
   }
 
   // --> Création de la card HTML du Tag
@@ -54,12 +57,19 @@ class ListTags {
   // --> Recréer l'ensemble des tags
   reCreateTag() {
     ListTags.tagArray.forEach((value) => this.createCard(value))
+
+    // => Envoie des tags pour l'affichage des recettes correspondantes
+    this.sendTags()
   }
 
   tagFormatted(value) {
     const removeStopWord = new RemoveStopWords(value)
     const nameFiltered = removeStopWord.filterStopWord()
     ListTags.tagArrayFormatted.push(nameFiltered)
-    console.log(ListTags.tagArrayFormatted)
+    // console.log(ListTags.tagArrayFormatted)
+  }
+
+  sendTags() {
+    new RecipeTagFactory(ListTags.tagArrayFormatted)
   }
 }

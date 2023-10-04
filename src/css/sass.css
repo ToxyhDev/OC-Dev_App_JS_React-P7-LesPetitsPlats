@@ -192,6 +192,9 @@ li {
   max-width: 50%;
   flex: 1 0 50%;
 }
+.recipe__msgError {
+  font-size: 1.3125rem;
+}
 
 .header {
   background: url(../assets/header/banner.svg);

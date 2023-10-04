@@ -41,7 +41,7 @@ class GroupAllData {
         //  --> J'enlève les mots doublons
         this._newData[id] = [...new Set(this._newData[id])]
 
-        this._lengthTotal += this._newData[id].length
+        // this._lengthTotal += this._newData[id].length
 
         // ==> Création index inversé
         this._newData[id].forEach((word) => {
@@ -57,17 +57,19 @@ class GroupAllData {
       }
     }
 
-    const keys = Object.keys(this._invertedIndex)
-    keys.forEach((element) => (this._lengthWordTotal += element.length))
+    return this._invertedIndex
 
-    const invertedIndexLength = Object.keys(this._invertedIndex).length
+    // const keys = Object.keys(this._invertedIndex)
+    // keys.forEach((element) => (this._lengthWordTotal += element.length))
 
-    return {
-      groupedData: this._newData,
-      lengthTotal: this._lengthTotal,
-      invertedIndex: this._invertedIndex,
-      invertedIndexLenght: invertedIndexLength,
-      invertedIdLenght: this._lengthWordTotal,
-    }
+    // const invertedIndexLength = Object.keys(this._invertedIndex).length
+
+    // return {
+    // groupedData: this._newData,
+    // lengthTotal: this._lengthTotal,
+    //   invertedIndex: this._invertedIndex
+    // invertedIndexLenght: invertedIndexLength,
+    // invertedIdLenght: this._lengthWordTotal,
+    // }
   }
 }

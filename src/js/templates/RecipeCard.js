@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* ----------------------------------------------------------------
     Création de la card d'une recette
@@ -10,7 +11,7 @@ class RecipeCard {
     // console.log(this._recipe)
 
     this.$wrapper = document.createElement('li')
-    this.$wrapper.classList.add('recipe')
+    // this.$wrapper.classList.add('recipe')
   }
 
   get recipes() {
@@ -18,6 +19,7 @@ class RecipeCard {
   }
 
   createRecipeCard() {
+    this.$wrapper.classList.add('recipe')
     const recipeCard = `
         <header class="recipe__header">
             <img
@@ -55,6 +57,17 @@ class RecipeCard {
     `
 
     this.$wrapper.innerHTML = recipeCard
+
+    return this.$wrapper
+  }
+
+  createMsgError() {
+    this.$wrapper.classList.add('recipe__msgError')
+    const msgError = `Aucune recette contient: <span class="font-strong">"${ListTags.tagArray.join(
+      ', '
+    )}"</span>, vous pouvez chercher "tartes aux pommes", "poisson", etc.`
+
+    this.$wrapper.innerHTML = msgError
 
     return this.$wrapper
   }

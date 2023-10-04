@@ -8,16 +8,21 @@ class App {
     this.recipesApi = new RecipesApi('./src/js/data/recipes.json')
 
     this.$recipesContainer = document.querySelector('.section-recipes')
+
+    this._initDataRecipes = new CreateRecipeCard()
   }
 
   async main() {
     //  --> Récupération des datas
     const recipesData = await this.recipesApi.get()
-    // console.log(recipesData)
+    console.log(recipesData)
 
     //  --> Trie des données des Recipes Cards
     const recipes = new RecipesFactory(recipesData, 'recipes')
     // console.log(recipes)
+
+    // const initDataRecipes = new CreateRecipeCard()
+    this._initDataRecipes.initRecipesArray(recipes)
 
     //  --> Trie des données des Nom de recettes (stop word + minuscule)
     const recipesNames = new RecipesFactory(recipesData, 'name')
@@ -37,16 +42,18 @@ class App {
     //  --> Création du tableau de recherche
     const groupAllData = new GroupAllData(allSortData).groupDatas()
     console.log(groupAllData)
+    this._initDataRecipes.initInvertedIndex(groupAllData)
 
     // --> Création du formulaire de recherche
     const mainSearch = new MainSearch()
     mainSearch.listenerValidate()
 
     //  --> Création des card recipe et ajout au DOM
-    recipes.forEach((recipe) => {
-      const templateCard = new RecipeCard(recipe)
-      this.$recipesContainer.appendChild(templateCard.createRecipeCard())
-    })
+    new RecipeTagFactory([])
+    // recipes.forEach((recipe) => {
+    //   const templateCard = new RecipeCard(recipe)
+    //   this.$recipesContainer.appendChild(templateCard.createRecipeCard())
+    // })
   }
 }
 
