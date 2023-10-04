@@ -47,9 +47,9 @@ class ListTags {
   // --> Supprime de la liste le tag et supprime visuel tag HTML
   removeTag(index) {
     ListTags.tagArray.splice(index, 1)
-    console.log(ListTags.tagArray)
+    // console.log(ListTags.tagArray)
     ListTags.tagArrayFormatted.splice(index, 1)
-    console.log(ListTags.tagArrayFormatted)
+    // console.log(ListTags.tagArrayFormatted)
     this.$filterSection.innerHTML = ''
     this.reCreateTag()
   }

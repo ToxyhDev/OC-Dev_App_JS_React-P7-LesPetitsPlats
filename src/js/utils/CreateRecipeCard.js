@@ -44,7 +44,6 @@ class CreateRecipeCard {
   }
 
   createMsgNotFound() {
-    console.log(ListTags.tagArray.join(' '))
     const templateCard = new RecipeCard()
     this.$recipesContainer.appendChild(templateCard.createMsgError())
   }
@@ -98,15 +97,15 @@ class CreateRecipeCard {
   }
 
   searchRecipes(resultMatchRecipes) {
-    // ==> Afficher les recettes !
+    // ==> Création du tableau des recettes en HTML
     const displayRecipe = CreateRecipeCard.recipes.filter((recipe) => {
       if (resultMatchRecipes.includes(`${recipe.id}`)) {
-        console.log(`${recipe.id}`)
         return recipe
       }
     })
 
     this.createRecipe(displayRecipe)
-    console.log(displayRecipe)
+    console.timeEnd('Algorithme 1')
+    // console.log(displayRecipe)
   }
 }

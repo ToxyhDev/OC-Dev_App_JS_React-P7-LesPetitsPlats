@@ -15,7 +15,7 @@ class App {
   async main() {
     //  --> Récupération des datas
     const recipesData = await this.recipesApi.get()
-    console.log(recipesData)
+    // console.log(recipesData)
 
     //  --> Trie des données des Recipes Cards
     const recipes = new RecipesFactory(recipesData, 'recipes')
@@ -37,11 +37,11 @@ class App {
     // console.log(recipesIngredients)
 
     const allSortData = [...recipesNames, ...recipesDesc, ...recipesIngredients]
-    console.log(allSortData)
+    // console.log(allSortData)
 
     //  --> Création du tableau de recherche
     const groupAllData = new GroupAllData(allSortData).groupDatas()
-    console.log(groupAllData)
+    // console.log(groupAllData)
     this._initDataRecipes.initInvertedIndex(groupAllData)
 
     // --> Création du formulaire de recherche
