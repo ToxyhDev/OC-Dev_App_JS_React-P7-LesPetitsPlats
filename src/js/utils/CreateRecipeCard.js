@@ -58,33 +58,34 @@ class CreateRecipeCard {
     // --> Initialise tableau pour rajouter id recette
     let addMatchRecipes = []
 
-    tags.filter((tag) => {
+    for (const tag of tags) {
       const addMatchRecipe = []
       for (const word in words) {
-        // -> search mot commencant par tag et ajoute
         if (word.startsWith(tag)) {
           addMatchRecipe.push(words[word].join(' '))
         }
       }
-
-      // --> Enlève les id double sur les correspondances du tag
       addMatchRecipes.push(
         Array.from(new Set(addMatchRecipe.join(' ').split(' '))).join(' ')
       )
-    })
+    }
 
-    // --> Formate le tableau pour l'utiliser
     let resultMatchRecipes = addMatchRecipes.join(' ').split(' ')
 
-    // => Si + de 2 tags supprimer non doublon
+    let filteredMatchRecipes = []
     if (tags.length >= 2) {
-      // -> Le tableau tourne autant de fois qu'il y a de tags
+      console.log(resultMatchRecipes)
       for (let i = 1; i < tags.length; i++) {
-        resultMatchRecipes = resultMatchRecipes.filter(
-          (value, index, array) => {
-            return array.indexOf(value) !== index
+        console.log(i)
+
+        for (const [key, value] of resultMatchRecipes.entries()) {
+          if (resultMatchRecipes.includes(value, key + 1)) {
+            filteredMatchRecipes.push(value)
           }
-        )
+        }
+
+        resultMatchRecipes = filteredMatchRecipes
+        filteredMatchRecipes = []
       }
     }
 

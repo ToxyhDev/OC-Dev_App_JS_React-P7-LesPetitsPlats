@@ -14,12 +14,14 @@ class RemoveStopWords {
   }
 
   filterStopWord() {
-    const wordFilter = this._data
-      .filter((word) => !this._stopWords.includes(word.toLowerCase()))
-      .join(' ')
-
+    let wordFilter = ''
+    for (const word of this._data) {
+      if (!this._stopWords.includes(word.toLowerCase())) {
+        wordFilter += word + ' '
+      }
+    }
+    wordFilter = wordFilter.trim()
     const removePonct = wordFilter.replace(/\p{P}/gu, '')
-
     return removePonct.toLowerCase()
   }
 

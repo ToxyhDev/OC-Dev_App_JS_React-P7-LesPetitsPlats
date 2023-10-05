@@ -13,7 +13,6 @@ class ListTags {
 
   // --> J'ajoute mes tags saisi à ma liste(tableau)
   addToListTag(value) {
-    console.log(value)
     ListTags.tagArray.push(value)
     // console.log(ListTags.tagArray)
 
