@@ -110,7 +110,6 @@ class CreateRecipeCard {
     })
 
     this.createRecipe(displayRecipe)
-    console.timeEnd('Algorithme 1')
     // console.log(displayRecipe)
   }
 }

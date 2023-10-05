@@ -22,8 +22,6 @@ class MainSearch {
     event.preventDefault()
     // console.log(this.$inputForm.value.length)
     if (this.$inputForm.value.length >= 3) {
-      console.time('Algorithme 1')
-      // console.log('Saisi validé')
       this.addTag(this.$inputForm.value)
       this.$inputForm.value = ''
     } else {
