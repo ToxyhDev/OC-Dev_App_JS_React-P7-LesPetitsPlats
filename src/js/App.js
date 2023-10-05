@@ -36,14 +36,20 @@ class App {
 
     //  --> Trie des données des Ingrédients de recettes (stop word + minuscule)
     const recipesIngredients = new RecipesFactory(recipesData, 'ingredients')
-    console.log(recipesIngredients)
-
-    const allSortData = [...recipesNames, ...recipesDesc, ...recipesIngredients]
-    // console.log(allSortData)
+    // console.log(recipesIngredients)
 
     const recipesAppliance = new RecipesFactory(recipesData, 'appareils')
 
     const recipesUstensils = new RecipesFactory(recipesData, 'ustensiles')
+
+    const allSortData = [
+      ...recipesNames,
+      ...recipesDesc,
+      ...recipesIngredients,
+      ...recipesAppliance,
+      ...recipesUstensils,
+    ]
+    // console.log(allSortData)
 
     this._initDataFilters.initAppliance(
       recipesIngredients,
@@ -66,6 +72,8 @@ class App {
     //   const templateCard = new RecipeCard(recipe)
     //   this.$recipesContainer.appendChild(templateCard.createRecipeCard())
     // })
+
+    new FiltersSearch().listenerInput()
   }
 }
 

@@ -60,6 +60,7 @@ class CreateRecipeCard {
 
     tags.filter((tag) => {
       const addMatchRecipe = []
+
       for (const word in words) {
         // -> search mot commencant par tag et ajoute
         if (word.startsWith(tag)) {

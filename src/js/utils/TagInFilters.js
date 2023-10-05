@@ -8,6 +8,8 @@ class TagInFilters {
   }
   static filtersData = []
 
+  static dataInFilter = []
+
   initAppliance(ingredients, appliance, ustensils) {
     TagInFilters.filtersData.push(ingredients)
     TagInFilters.filtersData.push(appliance)
@@ -52,6 +54,13 @@ class TagInFilters {
 
     const removeDouble = Array.from(new Set(elementArray))
     this.createTagInFilter(removeDouble, index)
+
+    if (TagInFilters.dataInFilter.length >= 3) {
+      TagInFilters.dataInFilter = []
+    }
+    TagInFilters.dataInFilter.push(removeDouble)
+
+    console.log(TagInFilters.dataInFilter)
   }
 
   createTagInFilter(data, index) {
@@ -65,9 +74,25 @@ class TagInFilters {
       )
 
       labelElement.addEventListener('click', () => {
-        console.time('Algorithme 1')
         new ListTags().addToListTag(tag)
+        new FiltersSearch().deleteInput(index)
       })
     })
+  }
+
+  sortSearchAdvanced(value, index) {
+    const addMatchRecipe = []
+    const words = TagInFilters.dataInFilter[index]
+    // console.log(words)
+    for (const word of words) {
+      // console.log(word)
+      // -> search mot commencant par lettre saisi
+      if (word.toLowerCase().startsWith(value.toLowerCase())) {
+        // console.log(word)
+        addMatchRecipe.push(word)
+      }
+    }
+    console.log(addMatchRecipe)
+    this.createTagInFilter(addMatchRecipe, index)
   }
 }

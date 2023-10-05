@@ -16,8 +16,20 @@ class GroupAllData {
   groupDatas() {
     this._data.map((element) => {
       const id = element.id
-      const words =
-        element.name || element.desc || element.ingredients.join(' ')
+
+      const name = element.name || ''
+      const desc = element.desc || ''
+      const ingredients = Array.isArray(element.ingredients)
+        ? element.ingredients.join(' ')
+        : ''
+      const appliance = element.appliance || ''
+      const ustensils = Array.isArray(element.ustensils)
+        ? element.ustensils.join(' ')
+        : ''
+
+      const words = [name, desc, ingredients, appliance, ustensils]
+        .filter(Boolean)
+        .join(' ')
 
       // En utilisant Object.hasOwnProperty.call, j'évite tout conflit
       // potentiel avec d'autres implémentations de hasOwnProperty
