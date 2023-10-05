@@ -8,7 +8,8 @@ class Filters {
 
   listenerBtnFilter() {
     this.$btnFilter.forEach((element, index) => {
-      element.addEventListener('click', () => {
+      const $btn = element.querySelector('.filter__button')
+      $btn.addEventListener('click', () => {
         element.classList.toggle('active')
 
         const $dropdown = document.getElementById(`filter-dropdown${index}`)
