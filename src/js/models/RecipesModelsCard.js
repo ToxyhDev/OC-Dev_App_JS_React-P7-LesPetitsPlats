@@ -6,13 +6,18 @@
 
 class RecipesModelsCard {
   constructor(data) {
-    console.log(data)
+    // console.log(data)
 
+    this._id = data.id
     this._name = data.name
     this._image = data.image
     this._desc = data.description
     this._ingredients = data.ingredients
     this._time = data.time
+  }
+
+  get id() {
+    return this._id
   }
 
   get name() {
