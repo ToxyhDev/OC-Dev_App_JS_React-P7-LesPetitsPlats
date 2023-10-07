@@ -68,6 +68,20 @@
     padding-right: 4rem;
   }
 
+  &__remove {
+    border: none;
+    background: none;
+    position: absolute;
+    margin: 5.2rem;
+
+    width: 0.8125rem;
+    height: 0.8125rem;
+    background-image: url(../assets/header/delete-input.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   &__button {
     border: none;
     width: 3.1875rem;

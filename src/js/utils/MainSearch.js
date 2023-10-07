@@ -9,12 +9,20 @@ class MainSearch {
 
     this.$inputForm = document.querySelector('.searchBar__input')
 
+    this.$deleteInput = document.querySelector('.searchBar__remove')
+
     this._ListTags = new ListTags()
   }
 
   listenerValidate() {
     this.$formMainSearch.addEventListener('submit', (event) => {
       this.validate(event)
+    })
+  }
+
+  listenerRemove() {
+    this.$deleteInput.addEventListener('click', () => {
+      this.$inputForm.value = ''
     })
   }
 

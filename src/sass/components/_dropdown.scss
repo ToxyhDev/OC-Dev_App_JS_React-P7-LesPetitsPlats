@@ -72,6 +72,21 @@
     font-size: 0.875rem;
     font-weight: 400;
   }
+
+  &__remove {
+    border: none;
+    background: none;
+    position: absolute;
+    margin-right: 2.19rem;
+
+    width: 0.875rem;
+    height: 0.875rem;
+    background-image: url(../assets/header/delete-advancedform.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+
   &__btn {
     border: none;
     background: none;

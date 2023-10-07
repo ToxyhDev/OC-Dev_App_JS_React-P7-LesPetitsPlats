@@ -65,6 +65,7 @@ class App {
     // --> Création du formulaire de recherche
     const mainSearch = new MainSearch()
     mainSearch.listenerValidate()
+    mainSearch.listenerRemove()
 
     //  --> Création des card recipe et ajout au DOM
     new RecipeTagFactory([])
@@ -73,7 +74,9 @@ class App {
     //   this.$recipesContainer.appendChild(templateCard.createRecipeCard())
     // })
 
-    new FiltersSearch().listenerInput()
+    const filterSearch = new FiltersSearch()
+    filterSearch.listenerInput()
+    filterSearch.listenerInputRemove()
   }
 }
 
