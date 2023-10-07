@@ -26,9 +26,7 @@ class FiltersSearch {
   }
 
   listenerInputRemove() {
-    // console.log(Array.from(this.$inputRemove))
     this.$inputRemove.forEach((element, index) => {
-      console.log(element)
       element.addEventListener('click', (event) => {
         event.preventDefault()
         event.stopPropagation()

@@ -51,14 +51,11 @@
   &__form {
     width: 100%;
     position: relative;
-    // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: end;
   }
-  //   &__label {
-  //     display: none;
-  //   }
+
   &__input {
     border: none;
     width: 100%;

@@ -9,8 +9,6 @@ class MainSearch {
 
     this.$inputForm = document.querySelector('.searchBar__input')
 
-    this.$deleteInput = document.querySelector('.searchBar__remove')
-
     this._ListTags = new ListTags()
   }
 
@@ -20,15 +18,9 @@ class MainSearch {
     })
   }
 
-  listenerRemove() {
-    this.$deleteInput.addEventListener('click', () => {
-      this.$inputForm.value = ''
-    })
-  }
-
   validate(event) {
     event.preventDefault()
-    // console.log(this.$inputForm.value.length)
+    event.stopPropagation()
     if (this.$inputForm.value.length >= 3) {
       this.addTag(this.$inputForm.value)
       this.$inputForm.value = ''
