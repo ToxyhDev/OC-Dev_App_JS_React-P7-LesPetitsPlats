@@ -35,7 +35,7 @@
 - [x] **Étape n° 3 : Faire la fiche d’investigation
 - [x] **Étape n° 4 : Implémenter
 - [x] **Étape n° 5 : Choisir la bonne version
-- [ ] **Étape n° 6 : Finaliser les attendus
-- [ ] **Étape n° 7 : Test manuels
+- [x] **Étape n° 6 : Finaliser les attendus
+- [x] **Étape n° 7 : Test manuels
 
 ---
